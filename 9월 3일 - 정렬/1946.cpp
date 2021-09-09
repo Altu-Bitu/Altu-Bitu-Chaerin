@@ -20,14 +20,17 @@ bool cmp(const score &i1, const score &i2) {
     return i1.document < i2.document;
 }
 
+//서류심사성적순으로 나열한 상태에서 면접 성적만 비교
+//서류심사성적이 좋은 사람의 면접 성적을 interview_best에 저장
+//차례로 내려가며 interview_best보다 더 좋은 면접 성적을 받은 사람만 채용
+//interview_best 갱신
 int cnt(int n) {
-    int sum = n;
-    for (int i = 1; i < n; i++) {
-        for (int j = 0; j < i; j++) {
-            if (arr[i].interview > arr[j].interview) {
-                sum--;
-                break;
-            }
+    int sum = 0;
+    int interview_best = n+1;
+    for (int i = 0; i < n; i++) {
+        if (interview_best > arr[i].interview){
+            interview_best = arr[i].interview;
+            sum++;
         }
     }
     return sum;
