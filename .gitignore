@@ -185,6 +185,4 @@ $RECYCLE.BIN/
 
 CMakeLists.txt
 
-.DS_Store
-
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,c++,clion+all
