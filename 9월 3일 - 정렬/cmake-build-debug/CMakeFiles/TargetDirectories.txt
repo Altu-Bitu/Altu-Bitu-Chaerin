@@ -1,3 +1,0 @@
-/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/cmake-build-debug/CMakeFiles/sort.dir
