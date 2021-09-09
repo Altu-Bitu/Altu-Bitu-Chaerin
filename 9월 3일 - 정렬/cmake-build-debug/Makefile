@@ -129,30 +129,6 @@ sort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/build
 .PHONY : sort/fast
 
-11399.o: 11399.cpp.o
-.PHONY : 11399.o
-
-# target to build an object file
-11399.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/11399.cpp.o
-.PHONY : 11399.cpp.o
-
-11399.i: 11399.cpp.i
-.PHONY : 11399.i
-
-# target to preprocess a source file
-11399.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/11399.cpp.i
-.PHONY : 11399.cpp.i
-
-11399.s: 11399.cpp.s
-.PHONY : 11399.s
-
-# target to generate assembly for a file
-11399.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort.dir/build.make CMakeFiles/sort.dir/11399.cpp.s
-.PHONY : 11399.cpp.s
-
 1946.o: 1946.cpp.o
 .PHONY : 1946.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sort"
-	@echo "... 11399.o"
-	@echo "... 11399.i"
-	@echo "... 11399.s"
 	@echo "... 1946.o"
 	@echo "... 1946.i"
 	@echo "... 1946.s"

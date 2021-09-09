@@ -13,4 +13,4 @@ add_executable(sort
         #1026.cpp
         #1431.cpp
         #11399.cpp
-        10994.cpp)
+        1946.cpp)
