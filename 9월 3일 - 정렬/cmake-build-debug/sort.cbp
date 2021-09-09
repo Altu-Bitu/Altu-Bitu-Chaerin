@@ -80,7 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/13458.cpp">
+		<Unit filename="/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/11399.cpp">
+			<Option target="sort"/>
+		</Unit>
+		<Unit filename="/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/1946.cpp">
 			<Option target="sort"/>
 		</Unit>
 		<Unit filename="/Users/chaerin/Documents/GitHub/Altu-Bitu-Chaerin/9월 3일 - 정렬/CMakeLists.txt">
