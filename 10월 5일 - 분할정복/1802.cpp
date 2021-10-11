@@ -18,7 +18,7 @@ bool conquer(string str) {
         // true 반환
         return true;
 
-    // 문자열 길이가 1이 아니면
+        // 문자열 길이가 1이 아니면
     else {
         // 문자열의 가운데를 가리키는 인덱스
         int mid = size / 2;
@@ -33,7 +33,7 @@ bool conquer(string str) {
                 // false 반환
                 return false;
             }
-            // 가장 가운데 값을 기준으로 양쪽 대칭되는 곳의 값이 서로 다르면
+                // 가장 가운데 값을 기준으로 양쪽 대칭되는 곳의 값이 서로 다르면
             else {
                 // 인덱스 이동
                 left--;
@@ -42,8 +42,9 @@ bool conquer(string str) {
         }
 
         // 양쪽부분에서 동일한 과정을 반복
-        // 양쪽부분 중 한 쪽의 결과라도 false이면 전체 결과가 false여야 하므로 &&로 묶어줌
-        return (conquer(str.substr(0, mid)) && conquer(str.substr(mid + 1, str.size())));
+        // !!! 이미 가운데 값을 기준으로 대칭되는 곳이 서로 다른 값을 가지므로 둘 중 한 쪽만 검사해도 됨!
+        // return (conquer(str.substr(0, mid)) && conquer(str.substr(mid + 1, str.size())));
+        return (conquer(str.substr(0, mid)));
     }
 }
 

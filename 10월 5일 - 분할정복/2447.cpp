@@ -18,15 +18,16 @@ void star(int n, int row, int col) {
                 vec[row + i][col + j] = "*";
             }
         }
-    } else {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (i == 1 && j == 1)
-                    continue;
-                star(n / 3, row + i * n / 3, col + j * n / 3);
-            }
+        return;
+    }
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i == 1 && j == 1)
+                continue;
+            star(n / 3, row + i * n / 3, col + j * n / 3);
         }
     }
+
 }
 
 int main() {

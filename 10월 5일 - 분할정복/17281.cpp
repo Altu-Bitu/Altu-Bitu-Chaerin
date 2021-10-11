@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ int move(int result, vector<int> &ground) {
     // 홈런인 경우 타자도 홈으로 들어감
     if (result == 4)
         cnt++;
-        // 홈런이 아닌 경우 타자는 자기 자리를 찾아감
+    // 홈런이 아닌 경우 타자는 자기 자리를 찾아감
     else
         ground[result] = 1;
     return cnt;
@@ -65,9 +66,8 @@ int main() {
             one_case.push_back(players[i]);
 
             // 4번 타자는 무조건 1번 선수가
-            if (i == 4) {
+            if (i == 4)
                 one_case.push_back(players[1]);
-            }
         }
 
         // 가능한 모든 타순을 cases 벡터에 한 행씩 저장
@@ -102,21 +102,21 @@ int main() {
             // 아웃이 세 번 나올 때까지
             while (true) {
 
-                int result = cases[i][vec[j][player]];
+                int result = vec[j][cases[i][player]];
 
-                if (result == 0) {
+                if (result == 0)
                     out_cnt++;
-                    //cout << "out : " << out_cnt << '\n';
-                    if (out_cnt == 3)
-                        break;
-                } else {
-                    score += move(cases[i][vec[j][player]], ground);
-                }
+                else
+                    score += move(vec[j][cases[i][player]], ground);
 
                 // 다음 선수 차례
                 player++;
                 if (player > 9)
                     player = 1;
+
+                // 아웃이 세 번 나오면 이닝 종료
+                if (out_cnt == 3)
+                    break;
 
             }
 
