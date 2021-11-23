@@ -44,24 +44,10 @@ void printRoom(int n, int m, vector<vector<int>> &room) {
     cout << '\n';
 }
 
-int main() {
-
-    // n : 세로 크기, m : 가로 크기, (r, c) : 로봇청소기가 있는 좌표
-    // d : 로봇청소기가 바라보는 방향 (0 : 북쪽, 1 : 동쪽, 2 : 남쪽, 3 : 서쪽)
-    int n, m, r, c, d;
-    cin >> n >> m >> r >> c >> d;
-
-    // 방의 상태를 저장할 이중벡터 (0 : 청소 X, 1 : 벽, 2 : 청소 O)
-    vector<vector<int>> room(n, vector<int>(m, 0));
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cin >> room[i][j];
-        }
-    }
+int cntCleanRobot(int r, int c, int d, vector<vector<int>> &room) {
 
     // 현재 로봇의 위치, 방향
     pair<ci, int> robot = {{r, c}, d};
-
     room[r][c] = 2;
 
     // 로봇청소기가 청소하는 칸의 수
@@ -101,13 +87,30 @@ int main() {
                 }
                 else {
                     // cout << "종료 조건 : " << robot.first.first << " " << robot.first.second << " " << robot.second << "\n";
-                    goto EXIT;
+                    return clean_cnt;
                 }
             }
         }
+
     }
 
-    EXIT :
-    cout << clean_cnt;
+}
+
+int main() {
+
+    // n : 세로 크기, m : 가로 크기, (r, c) : 로봇청소기가 있는 좌표
+    // d : 로봇청소기가 바라보는 방향 (0 : 북쪽, 1 : 동쪽, 2 : 남쪽, 3 : 서쪽)
+    int n, m, r, c, d;
+    cin >> n >> m >> r >> c >> d;
+
+    // 방의 상태를 저장할 이중벡터 (0 : 청소 X, 1 : 벽, 2 : 청소 O)
+    vector<vector<int>> room(n, vector<int>(m, 0));
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> room[i][j];
+        }
+    }
+
+    cout << cntCleanRobot(r, c, d, room);
 
 }

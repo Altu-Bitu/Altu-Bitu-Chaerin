@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(tree
         #14675.cpp
         #15681.cpp
-        #14503.cpp
+        14503.cpp
         #2011.cpp
-        5639.cpp
+        #5639.cpp
         )
 
